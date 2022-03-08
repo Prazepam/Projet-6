@@ -46,6 +46,12 @@ h1 {
     color: #D3573C;
     font-size: 150%;
     margin-bottom: 0%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.photographer_section article a{
+    text-decoration: none;
 }
 
 .photographer_section article img {
