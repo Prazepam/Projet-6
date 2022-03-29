@@ -5,9 +5,10 @@ function photographerFactory(data) {
 
     function getUserCardDOM() {
         const article = document.createElement('article');
-
         const img = document.createElement('img');
-        img.setAttribute("src", picture)
+        img.setAttribute("src", picture);
+        img.setAttribute("alt", name);
+
 
         const photographBox = document.createElement('div');
         photographBox.classList.add('photographBox');
@@ -18,6 +19,7 @@ function photographerFactory(data) {
         const h2 = document.createElement('h2');
         h2.textContent = name;
         h2.setAttribute("arialabel", "Identité du photographe");
+        h2.setAttribute("alt", name)
 
         const cityCountry = document.createElement('div');
         cityCountry.textContent= city +','+''+country;
@@ -40,6 +42,7 @@ function photographerFactory(data) {
         linkProfilPhotograph.classList.add('linkProfilPhotograph');
         linkProfilPhotograph.setAttribute('href', link);
         linkProfilPhotograph.setAttribute("arialabel", "lien vers le profil du photographe");
+
 
 
 
