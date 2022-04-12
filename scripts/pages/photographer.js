@@ -14,18 +14,20 @@ async function getPhotographer() {
         window.location.replace();
     }
     const selectedMedia =  media.filter(media => media.photographerId== photographerId );
-    displayData(photographerfind, selectedMedia) 
-;
+    displayData(photographerfind, selectedMedia);
     
 
 }
 getPhotographer();
 
 function displayData(photographer, media) {
-    const photographerHeader = document.querySelector(".photographer_header");
-    console.log (photographer, media);
-    /* appel des fonctions definies dans photographerprofil 
-        refaire la partie photographerprofil et l'injecté*/
-   
+    const photographerHeader = document.querySelector(".photograph-header");
+    const PhotographeBox = photographBox(photographer);
+    const PhotographerProfil = PhotographeBox.getPhotographerProfil();
+    const photograpgherPortrait = PhotographeBox.getPhotographerPicture();
+    console.log (PhotographerProfil)
+    photographerHeader.appendChild(PhotographerProfil);
+    photographerHeader.appendChild(photograpgherPortrait);
+    
 };
 
